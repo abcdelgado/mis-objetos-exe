@@ -1,6 +1,7 @@
 
 import os
 from pathlib import Path
+from datetime import datetime
 
 docs_path = Path(__file__).parent / "docs"
 index_file = docs_path / "index.html"
@@ -51,6 +52,7 @@ html_content = '''<!DOCTYPE html>
             transition: background 0.3s;
             display: flex;
             align-items: center;
+            justify-content: space-between;
         }
         li:hover {
             background-color: #e0ebff;
@@ -64,6 +66,25 @@ html_content = '''<!DOCTYPE html>
         .icon {
             margin-right: 10px;
             color: #1c4273;
+        }
+        .fecha {
+            font-size: 0.85em;
+            color: #777;
+            margin-left: 10px;
+            white-space: nowrap;
+        }
+        footer {
+            text-align: center;
+            font-size: 0.9em;
+            color: #555;
+            margin-top: 60px;
+            border-top: 1px solid #ccc;
+            padding-top: 20px;
+        }
+        footer a {
+            color: #1c4273;
+            text-decoration: none;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -86,13 +107,22 @@ for asignatura_dir in sorted(docs_path.iterdir()):
                 else:
                     titulo = ova_dir.name.replace('-', ' ').title()
                 link = f"{asignatura_dir.name}/{ova_dir.name}/index.html"
-                html_content += f"<li><i class='fas fa-book icon'></i><a href='{link}' target='_blank'>{titulo}</a></li>"
+                mod_time = datetime.fromtimestamp(ova_dir.stat().st_mtime).strftime("%d/%m/%Y %I:%M %p")
+                html_content += f"<li><i class='fas fa-book icon'></i><a href='{link}' target='_blank'>{titulo}</a><span class='fecha'>{mod_time}</span></li>"
 
         html_content += "</ul>"
 
-html_content += "</div></body></html>"
+html_content += '''
+        <footer>
+            Desarrollado por: César A. Delgado B. – 
+            Sitio Web: <a href="https://profecesard.com" target="_blank">profecesard.com</a> – 
+            Todos los Derechos reservados.
+        </footer>
+    </div>
+</body>
+</html>'''
 
 with open(index_file, "w", encoding="utf-8") as f:
     f.write(html_content)
 
-print(f"✅ index.html visualmente mejorado con iconos y centrado generado en: {index_file}")
+print(f"✅ index.html generado con pie de página en: {index_file}")
