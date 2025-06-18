@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3. Herencia </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="César A. Delgado B." />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.8.1 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+<body class="exe-web-site" id="exe-node-96"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<section id="emptyHeader"></section>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">TECNOLOGÍA WEB 1</a></li>
+   <li><a href="mdulo_1.html" class="no-ch">MÓDULO 1</a></li>
+   <li><a href="m1__terminologa_web.html" class="no-ch">M1 - Terminología Web</a></li>
+   <li><a href="m1introduccin_al_ambiente_web.html" class="daddy">M1-Introducción al ambiente web</a>
+   <ul class="other-section">
+      <li><a href="1_internet.html" class="no-ch">1. Internet</a></li>
+      <li><a href="2_pgina_web.html" class="no-ch">2. Página Web</a></li>
+      <li><a href="3_qu_es_un_sitio_web.html" class="no-ch">3. ¿Qué es un Sitio Web?</a></li>
+      <li><a href="4_pgina_web_vs_sitio_web.html" class="no-ch">4. Página Web vs Sitio Web</a></li>
+      <li><a href="5_cmo_funciona.html" class="no-ch">5. ¿Cómo Funciona?</a></li>
+      <li><a href="51_protocolo_tcpip.html" class="no-ch">5.1 Protocolo TCP/IP</a></li>
+      <li><a href="52_direccin_ip.html" class="no-ch">5.2 Dirección IP</a></li>
+      <li><a href="53_ip_pblicas_y_privadas.html" class="no-ch">5.3 IP Públicas y Privadas</a></li>
+      <li><a href="54_nombre_de_dominio.html" class="no-ch">5.4 Nombre de Dominio</a></li>
+      <li><a href="55_www_world_wide_web.html" class="no-ch">5.5 WWW (World Wide Web)</a></li>
+      <li><a href="56_html.html" class="no-ch">5.6 HTML</a></li>
+      <li><a href="57_http.html" class="no-ch">5.7 HTTP</a></li>
+      <li><a href="58_url.html" class="no-ch">5.8 URL</a></li>
+      <li><a href="59_navegadores_y_buscadores.html" class="no-ch">5.9 Navegadores y Buscadores</a></li>
+      <li><a href="510_servidor_web.html" class="no-ch">5.10 Servidor Web</a></li>
+      <li><a href="8_referencias_bibliogrficas.html" class="no-ch">8. Referencias Bibliográficas</a></li>
+      <li><a href="world_wide_web_www.html" class="daddy">World Wide Web (WWW)</a>
+      <ul class="other-section">
+         <li><a href="objetivos.html" class="no-ch">Objetivos</a></li>
+         <li><a href="1_concepto.html" class="no-ch">1. Concepto</a></li>
+         <li><a href="bibliografa.html" class="no-ch">Bibliografía</a></li>
+         <li><a href="derechos_de_autor.html" class="no-ch">Derechos de Autor</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="m1evolucin_de_la_web.html" class="daddy">M1-Evolución de la Web</a>
+   <ul class="other-section">
+      <li><a href="web_10.html" class="no-ch">Web 1.0</a></li>
+      <li><a href="web_20.html" class="no-ch">Web 2.0</a></li>
+      <li><a href="web_30.html" class="no-ch">Web 3.0</a></li>
+      <li><a href="web_40.html" class="no-ch">Web 4.0</a></li>
+   </ul>
+   </li>
+   <li><a href="m1sitio_web.html" class="daddy">M1-Sitio Web</a>
+   <ul class="other-section">
+      <li><a href="1_elementos_en_cuanto_a_estructura.html" class="daddy">1. Elementos en cuanto a estructura</a>
+      <ul class="other-section">
+         <li><a href="11_cabecera_o_header.html" class="no-ch">1.1 Cabecera o header</a></li>
+         <li><a href="12_cuerpo_o_body.html" class="no-ch">1.2 Cuerpo o body</a></li>
+         <li><a href="13_pie_de_pgina_o_footer.html" class="no-ch">1.3 Pie de página o footer</a></li>
+      </ul>
+      </li>
+      <li><a href="2_elementos_en_cuanto_a_su_contenido.html" class="daddy">2. Elementos en cuanto a su contenido</a>
+      <ul class="other-section">
+         <li><a href="21_inicio_o_home.html" class="no-ch">2.1 Inicio o home</a></li>
+         <li><a href="22_quienes_somos.html" class="no-ch">2.2 Quienes somos</a></li>
+         <li><a href="22_productos_y_servicios.html" class="no-ch">2.2 Productos y servicios</a></li>
+         <li><a href="23_blog.html" class="no-ch">2.3 Blog</a></li>
+         <li><a href="24_poltica_de_privacidad.html" class="no-ch">2.4 Política de privacidad</a></li>
+         <li><a href="25_contacto.html" class="no-ch">2.5 Contacto</a></li>
+         <li><a href="26_otros_elementos.html" class="no-ch">2.6 Otros elementos</a></li>
+      </ul>
+      </li>
+      <li><a href="3_teoras_del_diseo_web.html" class="no-ch">3. Teorías del diseño web</a></li>
+      <li><a href="4_tipologa_de_pginas_web.html" class="no-ch">4. Tipología de páginas web</a></li>
+      <li><a href="5_elementos_para_su_publicacin.html" class="no-ch">5. Elementos para su publicación</a></li>
+      <li><a href="bibliografa0.html" class="no-ch">Bibliografía</a></li>
+      <li><a href="derechos_de_autor0.html" class="no-ch">Derechos de Autor</a></li>
+   </ul>
+   </li>
+   <li><a href="m1alternativas_para_crear_sitios_web.html" class="daddy">M1-Alternativas para crear Sitios Web</a>
+   <ul class="other-section">
+      <li><a href="introduccin.html" class="no-ch">Introducción</a></li>
+      <li><a href="1_editores.html" class="daddy">1. Editores</a>
+      <ul class="other-section">
+         <li><a href="11_editores_de_texto_sin_formato.html" class="no-ch">1.1 Editores de texto sin formato</a></li>
+         <li><a href="12_editor_wysiwyng.html" class="no-ch">1.2 Editor WYSIWYNG</a></li>
+         <li><a href="13_editores_profesionales.html" class="no-ch">1.3 Editores profesionales</a></li>
+      </ul>
+      </li>
+      <li><a href="2_aplicaciones_no_code_y_low_code.html" class="no-ch">2. Aplicaciones No Code y Low Code</a></li>
+      <li><a href="3_convertidores.html" class="no-ch">3. Convertidores</a></li>
+      <li><a href="4_lenguajes_de_marcado.html" class="daddy">4. Lenguajes de Marcado</a>
+      <ul class="other-section">
+         <li><a href="41_sgml.html" class="no-ch">4.1 SGML</a></li>
+         <li><a href="42_xml.html" class="no-ch">4.2 XML</a></li>
+         <li><a href="43_html.html" class="no-ch">4.3 HTML</a></li>
+         <li><a href="44_xhtml.html" class="no-ch">4.4 XHTML</a></li>
+      </ul>
+      </li>
+      <li><a href="5_lenguaje_de_hoja_de_estilo_css.html" class="no-ch">5. Lenguaje de hoja de estilo CSS</a></li>
+      <li><a href="6_otros_lenguajes_de_programacin.html" class="no-ch">6. Otros lenguajes de programación</a></li>
+      <li><a href="7_bibliografa.html" class="no-ch">7. Bibliografía</a></li>
+   </ul>
+   </li>
+   <li><a href="m1metodologa_de_desarrollo.html" class="daddy">M1-Metodología de desarrollo</a>
+   <ul class="other-section">
+      <li><a href="1_generalidades.html" class="no-ch">1. Generalidades</a></li>
+      <li><a href="2_anlisis_y_planificacin.html" class="no-ch">2. Análisis y planificación</a></li>
+      <li><a href="3_diseo.html" class="no-ch">3. Diseño</a></li>
+      <li><a href="4_desarrollo.html" class="no-ch">4. Desarrollo</a></li>
+      <li><a href="5_implementacin.html" class="no-ch">5. Implementación</a></li>
+      <li><a href="6_evaluacin.html" class="daddy">6. Evaluación</a>
+      <ul class="other-section">
+         <li><a href="61_usabilidad.html" class="no-ch">6.1 Usabilidad</a></li>
+         <li><a href="62_accesibilidad.html" class="no-ch">6.2 Accesibilidad</a></li>
+         <li><a href="63_arquitectura_de_la_informacin.html" class="no-ch">6.3 Arquitectura de la información</a></li>
+      </ul>
+      </li>
+      <li><a href="7_bibliografa0.html" class="no-ch">7. Bibliografía</a></li>
+   </ul>
+   </li>
+   <li><a href="mdulo_2.html" class="no-ch">MÓDULO 2</a></li>
+   <li><a href="m2visual_studio_code.html" class="no-ch">M2-Visual Studio Code</a></li>
+   <li><a href="m2etiquetas_estructura_elementos_web.html" class="no-ch">M2-Etiquetas, estructura, elementos web</a></li>
+   <li><a href="mdulo_3.html" class="no-ch">MÓDULO 3</a></li>
+   <li><a href="m3hojas_de_estilo.html" class="no-ch">M3-Hojas de Estilo</a></li>
+   <li><a href="m3competencias_del_mdulo.html" class="no-ch">M3-Competencias del módulo</a></li>
+   <li><a href="m3_introduccin.html" class="no-ch">M3- Introducción</a></li>
+   <li><a href="m3css_en_documentos.html" class="no-ch">M3-CSS en documentos</a></li>
+   <li class="current-page-parent"><a href="m3sntaxis.html" class="current-page-parent daddy">M3-Síntaxis</a>
+   <ul>
+      <li><a href="1_selectores.html" class="no-ch">1. Selectores</a></li>
+      <li><a href="2_selectores__tipos.html" class="no-ch">2. Selectores - Tipos</a></li>
+      <li id="active"><a href="3_herencia.html" class="active no-ch">3. Herencia</a></li>
+      <li><a href="4_colisiones.html" class="no-ch">4. Colisiones</a></li>
+   </ul>
+   </li>
+   <li><a href="m3unidades_de_medida_y_colores.html" class="no-ch">M3-Unidades de medida y colores</a></li>
+   <li><a href="m3modelos_de_cajas.html" class="daddy">M3-Modelos de cajas</a>
+   <ul class="other-section">
+      <li><a href="1_anchura.html" class="no-ch">1. Anchura</a></li>
+      <li><a href="2_altura.html" class="no-ch">2. Altura</a></li>
+      <li><a href="3_margen_y_relleno.html" class="no-ch">3. Margen y Relleno</a></li>
+      <li><a href="4_bordes.html" class="no-ch">4. Bordes</a></li>
+      <li><a href="5_fondos.html" class="no-ch">5. Fondos</a></li>
+   </ul>
+   </li>
+   <li><a href="m3posicionamiento_y_visualizacin.html" class="no-ch">M3-Posicionamiento y visualización</a></li>
+   <li><a href="m3propiedades_definidas.html" class="daddy">M3-Propiedades definidas</a>
+   <ul class="other-section">
+      <li><a href="1_tipografas.html" class="no-ch">1. Tipografías</a></li>
+      <li><a href="2_texto.html" class="no-ch">2. Texto</a></li>
+      <li><a href="3_enlaces.html" class="no-ch">3. Enlaces</a></li>
+      <li><a href="4_imgenes.html" class="no-ch">4. Imágenes</a></li>
+      <li><a href="5_listas.html" class="no-ch">5. Listas</a></li>
+      <li><a href="6_tablas.html" class="no-ch">6. Tablas</a></li>
+      <li><a href="7_formularios.html" class="no-ch">7. Formularios</a></li>
+   </ul>
+   </li>
+   <li><a href="m3validaccin_css.html" class="no-ch">M3-Validacción CSS</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="2_selectores__tipos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="4_colisiones.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3. Herencia</h1></header>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id27">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Herencia</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta27_218_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: justify;"><span style="font-size: 14pt; font-family: arial, helvetica, sans-serif;">Cuando se establece el valor de una propiedad CSS en un elemento, sus elementos descendientes heredan de forma automática el valor de esa propiedad. </span></p>
+<p style="text-align: center;"><span style="font-size: 14pt; font-family: arial, helvetica, sans-serif;"><img src="herencia.jpg" alt="" width="1024" height="398" /></span></p>
+<p style="text-align: justify;"><span style="font-size: 14pt; font-family: arial, helvetica, sans-serif;">En el ejemplo anterior, el estilo asignado al body (cuerpo) de la página establece que el color de la letra es blue, propiedad que será heredada de forma automática para todos los elementos de la página. </span></p>
+<p style="text-align: justify;"><span style="font-size: 14pt; font-family: arial, helvetica, sans-serif;">Las propiedades CSS aplican la herencia de estilos de forma automática, pero podemos anular su efecto si establecemos otros valores. Por ejemplo, para el body asignamos en los títulos &lt;h1&gt; la fuente Verdana y su color heredado en negro. Para los elementos &lt;p&gt; (párrafos) se hereda la fuente Arial y se define en el body.</span></p>
+<p style="text-align: center;"><span style="font-size: 14pt; font-family: arial, helvetica, sans-serif;"><img src="herencia1.jpg" alt="" width="1024" height="436" /></span></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper textIdevice em_iDevice" id="id28">
+<div class="iDevice emphasis1" >
+<header class="iDevice_header iDevice_header_noIcon"><h1 class="iDeviceTitle">Actividad de Aprendizaje (Instrucciones)</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta28_219_2" class="block iDevice_content">
+<div class="exe-text"><p style="text-align: center;"><span style="font-size: 14pt; font-family: arial, helvetica, sans-serif;"><img src="Actividad_de_Aprendizaje.png" alt="" width="850" height="170" /></span></p>
+<p><span style="font-size: 14pt; font-family: arial, helvetica, sans-serif;">Indicaciones generales:</span></p>
+<p style="text-align: justify;"><span style="font-size: 14pt; font-family: arial, helvetica, sans-serif;">Utilice Visual Studio Code para transcribir el código HTML que se presenta en la imagen.</span><br /><span style="font-size: 14pt; font-family: arial, helvetica, sans-serif;">Incluir para el selector p un estilo con la propiedad color con valor igual a green y la propiedad font-weight con valor igual a bold. Asigne un margen de 10px.</span></p>
+<p><span style="font-size: 14pt; font-family: arial, helvetica, sans-serif;"><img src="selector_estilos.jpg" alt="" width="761" height="393" style="display: block; margin-left: auto; margin-right: auto;" /></span></p>
+<ul>
+<li style="text-align: justify;"><span style="font-size: 14pt; font-family: arial, helvetica, sans-serif;">Envíe su trabajo a la plataforma de la siguiente manera:El archivo selector_estilos.html que ha sido codificado en Visual Studio Code.</span><br /><span style="font-size: 14pt; font-family: arial, helvetica, sans-serif;">Archivo en formato .pdf con captura de pantalla del código y del resultado en el navegador.</span></li>
+</ul>
+<p></p></div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="2_selectores__tipos.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="4_colisiones.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<footer id="siteFooter">Tecnología Web I - Glosario de Términos V1. Profesor: César A. Delgado B. </footer></div>
+<p id="made-with-eXe"><a href="https://exelearning.net/" target="_blank" rel="noopener"><span>Creado con eXeLearning<span> (Ventana nueva)</span></span></a></p><script type="text/javascript" src="_style_js.js"></script></body></html>
